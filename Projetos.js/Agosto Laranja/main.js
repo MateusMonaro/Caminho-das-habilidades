@@ -7,5 +7,5 @@ const desafios =[
 ];
 
 function iniciarDesafio() {
-    const name=document.getElementById("name")
+    const name=document.getElementById("name").value;
 }
