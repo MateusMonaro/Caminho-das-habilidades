@@ -7,8 +7,11 @@ const desafios =[
 ];
 
 function iniciarDesafio() {
+    
+    // Pega o nome digitado no HTML.
     const name=document.getElementById("name").value;
 
+    // Verifica se o aluno digitou o nome.
      if(name === ""){
         alert("Digite o seu nome para começar!");
         return;
@@ -80,7 +83,19 @@ if(
     pontos += 35;
 }
 
+let nível;
 
+if(pontos >= 70){
+    nível= "Inventor de Idéias";
+}
+
+else if (pontos >= 65){
+    nível = "Desenvolvedor";
+}
+
+else{
+    nível = "Explorador";
+}
 
 }
     
