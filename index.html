@@ -8,23 +8,26 @@
 </head>
 <body>
 
-<h1> CAMINHO DAS HABILIDADES </h1>
-<p> Prepare-se para descobrir o seu desafio. </p>
+    <div class="divFundo">
+        <h1> CAMINHO DAS HABILIDADES </h1>
+        <p> Prepare-se para descobrir o seu desafio. </p>
+        
+        <div class="campo">
+            <label for="name">Digite seu nome: </label>
+            
+            <input
+            type="text"
+            id="name"
+            placeholder="Seu nome"
+            >
+            
+            <button onclick="iniciarDesafio()"> 🚀Começar o desafio </button>
+        </div>
 
-<label for:"name">Digite seu nome: </label>
-
-<input
-    type="text"
-    id="name"
-    placeholder="Seu nome"
->
-
-<button onclick="iniciarDesafio()"> 🚀Começar o desafio </button>
-
-<div id="resultado"></div>
+        <div id="resultado"></div>
+    </div>
 
 <script src="main.js"></script>
-
 
 </body>
 </html>
