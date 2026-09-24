@@ -9,10 +9,10 @@ const desafios =[
 function iniciarDesafio() {
     
     // Pega o nome digitado no HTML.
-    const name=document.getElementById("name").value;
+    const nome=document.getElementById("name").value;
 
     // Verifica se o aluno digitou o nome.
-     if(name === ""){
+     if(nome === ""){
         alert("Digite o seu nome para começar!");
         return;
 
@@ -22,32 +22,35 @@ function iniciarDesafio() {
     const desafio = desafios[numero];
 
     document.getElementById("resultado").innerHTML =
-    `<h2>Olá ${name}! </h2>
-    <p> Seu desafio é:  </p>
-    <h3> ${desafio} </h3>
+    `<h2 class="ola">Olá ${nome}! </h2>`;
 
-    <label for ="resposta">
-    Qual é o projeto para este desafio?
-    </label>
-    
-    <br> </br>
+    setTimeout(() => {
+        document.getElementById("resultado").innerHTML +=
+        `
+        <p>↓ Seu desafio é: ↓</p>
+        <h3 class="desafio"> ${desafio} </h3>
 
-    <textarea
-    id ="resposta"
-    rows = "5"
-    cols = "40"
-    spaceplace = "Digite aqui o seu projeto?">
-    </textarea>
-    
-    <br> </br>
+        <div class="respostaBox">
+            <label for="resposta">
+                Qual é o projeto para este desafio?
+            </label>
 
-    <button onclick="avaliarResposta()"> Enviar projeto! </button>
-    `;
+            <textarea
+                id="resposta"
+                rows="5"
+                cols="40"
+                placeholder="Digite aqui o seu projeto?"
+            ></textarea>
+
+            <button onclick="avaliarResposta()">💻 Enviar projeto!</button>
+        </div>
+        `;
+    }, 1500);
 
 }
 
-function avaliarReposta(){
-    const nome = document.getElementById("nome").value;
+function avaliarResposta(){
+    const nome = document.getElementById("name").value;
     const resposta = document.getElementById("resposta").value;
     const textoDesafio = document.querySelector("#resultado h3");
 
