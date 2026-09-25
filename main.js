@@ -39,7 +39,7 @@ function iniciarDesafio() {
                 id="resposta"
                 rows="5"
                 cols="40"
-                placeholder="Digite aqui o seu projeto?"
+                placeholder="Digite aqui o seu projeto:"
             ></textarea>
 
             <button onclick="avaliarResposta()">💻 Enviar projeto!</button>
