@@ -39,7 +39,7 @@ function iniciarDesafio() {
                 id="resposta"
                 rows="5"
                 cols="40"
-                placeholder="Digite aqui o seu projeto:"
+                placeholder="Digite aqui o seu projeto?"
             ></textarea>
 
             <button onclick="avaliarResposta()">💻 Enviar projeto!</button>
@@ -49,10 +49,10 @@ function iniciarDesafio() {
 
 }
 
-function avaliarResposta(){
+function avaliarResposta() {
     const nome = document.getElementById("name").value;
     const resposta = document.getElementById("resposta").value;
-    const textoDesafio = document.querySelector("#resultado h3");
+    const textoDesafio = document.querySelector("#resultado h3").innerText;
 
     if(resposta.trim() === ""){
         alert("Digite o seu projeto para começar!");
@@ -79,7 +79,7 @@ if(
 }
 
 if(
-    texto.includes("Pesquisar")||
+    texto.includes("pesquisar")||
     texto.includes("analizar")||
     texto.includes("resolver")
 ){
@@ -100,5 +100,25 @@ else{
     nível = "Explorador";
 }
 
+   //Relatóri final 
+
+   document.getElementById("resultado").innerHTML =
+   `<h2> Caminho das Habilidades - Relatório</h2>
+   <p><strong> Participante: </strong> ${nome}</p>
+   <p><strong> Desafio: </strong> ${textoDesafio}</p>
+   <p><strong> Resposta: </strong> ${resposta}</p>
+   <p><strong> Pontuação: </strong> ${pontos}</p>
+   <p><strong> Nível: </strong> ${nivel}</p>
+   <p> O tempo de espera para o retorno da avaliação é ${tempo} dia(s)</p>
+
+${pontos >= 70
+? "Parabéns, você conseguiu uma ótima pontuação, continue assim!"
+: "Contiunue pesquisando e desenvolvendo novos projetos, você conseguirá na próxima!"
+
 }
-    
+
+    <button onclick="location.reload()">
+        Novo desafio!
+    </button>
+   `
+}
