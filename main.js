@@ -101,26 +101,28 @@ function avaliarResposta() {
         nivel = "Explorador";
     }
 
+    const mensagemFinal = pontos >= 70
+        ? "Parabéns, você conseguiu uma ótima pontuação, continue assim!"
+        : "Continue pesquisando e desenvolvendo novos projetos, você conseguirá na próxima!";
+
+    const classeMensagem = pontos >= 70 ? "mensagem-sucesso" : "mensagem-aviso";
+
     // Relatório final.
     document.getElementById("resultado").innerHTML =
-    `<h2>Caminho das Habilidades - Relatório</h2>
-    <p><strong>Participante:</strong> ${nome}</p>
-    <p><strong>Desafio:</strong> ${textoDesafio}</p>
-    <p><strong>Resposta:</strong> ${resposta}</p>
-    <p><strong>Pontuação:</strong> ${pontos}</p>
-    <p><strong>Nível:</strong> ${nivel}</p>
-    <p>O tempo de espera para o retorno da avaliação é ${tempo} dia(s).</p>
+    `<div class="relatorio">
+        <h2>Caminho das Habilidades - Relatório</h2>
+        <p class="avaliação"><strong>Participante:</strong> ${nome}</p>
+        <p class="avaliação"><strong>Desafio:</strong> ${textoDesafio}</p>
+        <p class="avaliação"><strong>Resposta:</strong> ${resposta}</p>
+        <p class="avaliação"><strong>Pontuação:</strong> ${pontos}</p>
+        <p class="avaliação"><strong>Nível:</strong> ${nivel}</p>
+        <p class="avaliação">O tempo de espera para o retorno da avaliação é ${tempo} dia(s).</p>
+    </div>
+    
+    <p class="${classeMensagem}">${mensagemFinal}</p>
 
-    ${pontos >= 70
-        ? "Parabéns, você conseguiu uma ótima pontuação, continue assim!"
-        : "Continue pesquisando e desenvolvendo novos projetos, você conseguirá na próxima!"
-    }
-
-    <br><br>
-
-    <button onclick="location.reload()">
-        Novo desafio!
+    <button class="recomecar" onclick="location.reload()">
+        <strong>↑ Novo desafio ↑</strong>
     </button>
     `;
 }
-    
