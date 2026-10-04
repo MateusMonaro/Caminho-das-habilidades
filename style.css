@@ -47,7 +47,7 @@ label {
     border-radius: 3px;
 }
 
-button {
+.iniciar {
     cursor: pointer;
     background-color: black;
     color: white;
@@ -94,6 +94,31 @@ button {
 #resultado h3 {
     font-size: 45px;
 }
+
+.mensagem-sucesso {
+    background: linear-gradient(135deg, #89f7a6, #57d78e);
+    color: #0d3b1f;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 2px solid #1f8f4f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mensagem-aviso {
+    background: linear-gradient(135deg, #fd5b2e, #fd0c0c);
+    color: #4d2d00;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 2px solid #d68a00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .respostaBox {
     display: flex;
     flex-direction: column;
@@ -161,4 +186,45 @@ button {
     border: 0;
     flex-shrink: 0;
 }
-    
+
+#resultado .avaliação {
+    background: #2d2d2d;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border-left: 5px solid #ffcc00;
+}
+
+#resultado .relatorio {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border-left: 5px solid #ffcc00;
+    width: 80%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+
+#resultado .relatorio novo desafio {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ffcc00;
+    color: #000000;
+    cursor: pointer;
+}
+
+.recomecar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 3px solid #ff5900;
+    background-color: #e40000;
+    color: #000000;
+    cursor: pointer;
+}
