@@ -295,3 +295,4 @@ function avaliarResposta() {
     </button>
     `;
 }
+
