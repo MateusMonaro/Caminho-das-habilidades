@@ -41,7 +41,6 @@ h1 {
     font-weight: 400px;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-
 }
 
 label,
@@ -70,6 +69,11 @@ label {
     padding: 8px 12px;
     border-radius: 16px;
     border: none;
+}
+
+.iniciar:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 0 4px rgb(134, 134, 134);
 }
 
 .divFundo {
@@ -187,6 +191,13 @@ label {
     border: 3px solid #707070;
     border-radius: 5px;
 }
+
+.respostaBox button:hover {
+    border: none;
+    transform: translateY(-3px);
+    box-shadow: 0 0 0 4px rgb(134, 134, 134);
+}
+
 .ola {
     font-size: 70px;
     font-family: "Permanent Marker", cursive;
