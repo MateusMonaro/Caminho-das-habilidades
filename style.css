@@ -69,6 +69,7 @@ label {
     padding: 8px 12px;
     border-radius: 16px;
     border: none;
+    transition: 0.3s;
 }
 
 .iniciar:hover{
@@ -89,7 +90,7 @@ label {
     align-items: center;
     gap: 20px;
     text-align: center;
-    padding: 8px 12px;
+    padding: 20px 12px;
 }
 
 .dot-field-canvas {
@@ -120,10 +121,10 @@ label {
     color: rgb(0, 0, 0);
     padding: 8px 12px;
     border-radius: 16px;
-    border: none;
+    border: 3px solid #1f1e1e;
 }
 
-#resultado h3 {
+#resultado .desafio {
     font-size: 45px;
 }
 
@@ -160,7 +161,7 @@ label {
     background-color: #f1f1f1;
     color: black;
     border-radius: 16px;
-    padding: 20px;
+    padding: 40px;
     width: 420px;
     max-width: 90%;
     box-sizing: border-box;
@@ -187,22 +188,25 @@ label {
     box-sizing: border-box;
 }
 
-.respostaBox button {
+.enviar {
     border: 3px solid #707070;
     border-radius: 5px;
 }
 
-.respostaBox button:hover {
+.enviar:hover {
     border: none;
     transform: translateY(-3px);
     box-shadow: 0 0 0 4px rgb(134, 134, 134);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
 .ola {
-    font-size: 70px;
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400px;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
+    font-size: 70px;
 }
 
 .desafio {
