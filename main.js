@@ -167,7 +167,7 @@ function iniciarDesafio() {
                 placeholder="Digite aqui o seu projeto?"
             ></textarea>
 
-            <button onclick="avaliarResposta()">💻 Enviar projeto!</button>
+            <button class="enviar" onclick="avaliarResposta()">💻 Enviar projeto!</button>
         </div>
         `;
     }, 1500);
@@ -295,4 +295,3 @@ function avaliarResposta() {
     </button>
     `;
 }
-
