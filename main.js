@@ -152,7 +152,7 @@ function iniciarDesafio() {
     setTimeout(() => {
         document.getElementById("resultado").innerHTML +=
         `
-        <p>↓ Seu desafio é: ↓</p>
+        <p class="apresentarDesafio">↓ Seu desafio é: ↓</p>
         <h3 class="desafio">${desafio}</h3>
 
         <div class="respostaBox">
